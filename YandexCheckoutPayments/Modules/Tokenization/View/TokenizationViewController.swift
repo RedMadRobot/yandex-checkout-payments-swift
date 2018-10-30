@@ -448,12 +448,12 @@ class TokenizationViewController: UIViewController {
         modules.append(vc)
 
         addChildViewController(modalTemplate)
-        modalTemplate.beginAppearanceTransition(true, animated: true)
         modalTemplate.view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(modalTemplate.view)
 
         modalTemplate.addChildViewController(vc)
         modalTemplate.setContentView(vc.view)
+        modalTemplate.beginAppearanceTransition(true, animated: true)
 
         let startConstraints = [
             modalTemplate.view.leading.constraint(equalTo: view.leading),
